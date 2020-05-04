@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/item_type_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="类型id：1">
+    </TextView>
+    <TextView
+        android:id="@+id/item_type_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="类型名称：一般事故">
+    </TextView>
+    <TextView
+        android:id="@+id/item_type_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="类型详情：有人员伤亡，飞机损毁较严重">
+    </TextView>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Other.Information.InfoFourActivity">
+    <TextView
+        android:text="2014年3月31日,土航B738与奥航F100日内瓦跑道上险撞"
+        android:textSize="20dp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/four_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#3D7087"
+        android:text="2014 年 3 月 31 日，一架土耳其航空公司的波音 737-800 型客机（注册号
+TC-JGV），执行从土耳其伊斯坦布尔飞往瑞士日内瓦的 TK-1919 航班。在向日内
+瓦机场 05 号跑道最后进近时，用英语与塔台建立了通信联系。
+此时，一架奥地利航空公司福克 100 型客机（注册号 OE-LVL），执行从瑞士
+日内瓦飞往奥地利维也纳的 OS-582 航班。当 TK-1919 距离跑道入口 7.5 海里时，
+OS-582 被许可在 05 号跑道对正跑道，并用英语与塔台进行通信。
+当时正在使用缩小跑道间隔（程序），（程序）要求飞机之间的最小间隔为
+2400 米。
+塔台通知 OS-582 航班在离场序列中的第 2 位，从与 Z 滑行道的交叉点离场
+的飞机将首先起飞，塔台许可 OS-582 航班对正 05 号跑道并等待。然后，他用法
+语许可一架私人飞机从 05 号跑道与 Z 滑行道的交叉点起飞，然后等待私人飞机
+离开跑道后许可 OS-582 离场，但意识到 TK-1919 正在接近。因此，他指令私人
+飞机以最快爬升速度爬升到 5000 英尺，指示 OS-582 爬升到 4000 英尺，指示
+TK-1919 减速到最小速度（机组认识到危险接近后，立即重新设置飞机构型以尽
+可能慢的速度进近），在私人飞机通过 GVA VOR（导航点）之后，指示其转向到
+010 度航向，然后在 TK-1919 距离跑道入口 2.2 海里时许可 OS-582 起飞。 跑道
+侵入监控与冲突告警系统（RIMCAS）的跑道安全网触发，但只发出了视觉警告，
+而此时管制员正在看外边，没有注意到这些。">
+    </TextView>
+
+
+</LinearLayout>

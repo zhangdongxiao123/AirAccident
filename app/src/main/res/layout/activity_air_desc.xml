@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Other.PicInfo.AirDescActivity">
+
+    <LinearLayout
+        android:id="@+id/airdesc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:background="@mipmap/beijing1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/airdesc_iv_back"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_back"
+                android:layout_centerVertical="true">
+            </ImageView>
+            <TextView
+                android:id="@+id/airdesc_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="航空安全事故详情"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff">
+            </TextView>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/airdes_iv_bigpic"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@mipmap/hangkong3"
+            android:scaleType="fitXY"
+            android:layout_margin="20dp">
+        </ImageView>
+        <TextView
+            android:id="@+id/airdesc_tv_title11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行 PF-418 航班从西班牙兰萨罗特飞往丹麦
+比隆，机上载有 180 名乘客和 6 名机组人员"
+            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_margin="20dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/airdesc_tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="15dp"
+            android:textColor="#3D7087"
+            android:text="2016 年 11 月 18 日，一架拉脱维亚派美雅航空公司（Primera Air）波音
+737-800 型客机（注册号 YL-PSD），执行 PF-418 航班从西班牙兰萨罗特飞往丹麦
+比隆，机上载有 180 名乘客和 6 名机组人员。在到达爬升顶点后不久，两名飞行
+员享用了不同的热餐，随后该机在法国上空沿航路飞行，预计到达比隆前约 90
+分钟时，副驾驶（35 岁，持有商用驾驶员执照（CPL），总飞行时间 3500 小时，
+该机型飞行时间 3200 小时）进行了受控休息，在休息大约 10 分钟时，副驾驶开
+始感觉不适，5 分钟后冲到厕所呕吐，没有事先提醒机长（35 岁，持有航线运输
+驾驶员执照（ATPL），总飞行时间 6180 小时，该机型飞行时间 5800 小时）。机长
+呼叫乘务长到驾驶舱，要求客舱机组人员照料副驾驶。当副驾驶返回驾驶舱时，
+对情况进行了讨论，机长决定单飞行员操作继续飞往比隆，因为只有 15 分钟就
+到下降顶点位置了。副驾驶坐回她的座位上，靠背尽可能向后倾斜，剩余航段作
+为观察员。飞机最终在比隆安全着陆。
+2017 年 1 月，丹麦事故调查委员会（HCL）发布了此次事件的最终调查报告，
+总结这起严重事件发生的可能原因如下：
+食物中毒最有可能导致副驾驶失能。">
+        </TextView>
+
+    </LinearLayout>
+
+</ScrollView>

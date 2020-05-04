@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#fff"
+    android:layout_marginTop="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/item_reason_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="原因id：1">
+    </TextView>
+    <TextView
+        android:id="@+id/item_reason_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="原因名称：机组原因">
+    </TextView>
+    <TextView
+        android:id="@+id/item_reason_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="原因详情：因为机组人员的失误，造成的事故">
+    </TextView>
+
+
+</LinearLayout>

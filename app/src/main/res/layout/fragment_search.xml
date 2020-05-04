@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/dantiaojian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="单条件查询"
+        android:layout_marginTop="10dp">
+    </Button>
+    <Button
+        android:id="@+id/duotiaojian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多条件查询"
+        android:layout_marginTop="10dp">
+    </Button>
+    <Button
+        android:id="@+id/shijianleixing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按事件类型查询"
+        android:layout_marginTop="10dp">
+    </Button>
+    <Button
+        android:id="@+id/shijianyuanyin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按事件原因查询"
+        android:layout_marginTop="10dp">
+    </Button>
+</LinearLayout>

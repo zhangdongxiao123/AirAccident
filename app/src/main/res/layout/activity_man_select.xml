@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search.sactivity.ManSelectActivity">
+    <Button
+        android:id="@+id/manSelect_zengjia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增加事故信息"
+        android:layout_marginTop="60dp">
+    </Button>
+    <Button
+        android:id="@+id/manSelect_genggai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改/删除事故信息"
+        android:layout_marginTop="60dp">
+    </Button>
+
+</LinearLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:background="@drawable/mian_top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <Button
+            android:id="@+id/fra_main_btn1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:text="列表新闻"
+            android:textColor="#3D7EB1"
+            android:textSize="16sp"
+            android:background="@drawable/round_btn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp">
+        </Button>
+        <Button
+        android:id="@+id/fra_main_btn2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:text="图片新闻"
+        android:textColor="#3D7EB1"
+        android:textSize="16sp"
+        android:background="@drawable/round_btn"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/fra_main_btn1"
+            android:layout_marginLeft="33dp">
+        </Button>
+        <Button
+            android:id="@+id/fra_main_btn3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:text="天气查询"
+            android:textColor="#3D7EB1"
+            android:textSize="16sp"
+            android:background="@drawable/round_btn"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fra_main_btn4"
+            android:layout_marginRight="33dp">
+        </Button>
+        <Button
+            android:id="@+id/fra_main_btn4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:text="历史今天"
+            android:textColor="#3D7EB1"
+            android:textSize="16sp"
+            android:background="@drawable/round_btn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp">
+        </Button>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="事故新闻"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="189dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:src="@drawable/home_a"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:src="@drawable/home_c" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="149dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="飞行轨迹"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="飞行航迹"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="189dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:src="@drawable/home_b"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:src="@drawable/home_d" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="149dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="冲突情景"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="红色警告"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="更多资讯"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp">
+    </TextView>
+    <com.example.airaccident.Other.Writeagain.FocusTextView
+        android:id="@+id/focus_tv"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:layout_below="@id/tv"
+        android:text="2016 年 11 月 18 日，一架拉脱维亚派美雅航空公司（Primera Air）波音
+737-800 型客机（注册号 YL-PSD），执行 PF-418 航班从西班牙兰萨罗特飞往丹麦
+比隆，机上载有 180 名乘客和 6 名机组人员。在到达爬升顶点后不久，两名飞行
+员享用了不同的热餐，随后该机在法国上空沿航路飞行，预计到达比隆前约 90
+分钟时，副驾驶（35 岁，持有商用驾驶员执照（CPL），总飞行时间 3500 小时，
+该机型飞行时间 3200 小时）进行了受控休息，在休息大约 10 分钟时，副驾驶开
+始感觉不适，5 分钟后冲到厕所呕吐，没有事先提醒机长（35 岁，持有航线运输
+驾驶员执照（ATPL），总飞行时间 6180 小时，该机型飞行时间 5800 小时）。机长
+呼叫乘务长到驾驶舱，要求客舱机组人员照料副驾驶。当副驾驶返回驾驶舱时，
+对情况进行了讨论，机长决定单飞行员操作继续飞往比隆，因为只有 15 分钟就
+到下降顶点位置了。副驾驶坐回她的座位上，靠背尽可能向后倾斜，剩余航段作
+为观察员。飞机最终在比隆安全着陆。" >
+    </com.example.airaccident.Other.Writeagain.FocusTextView>
+</LinearLayout>

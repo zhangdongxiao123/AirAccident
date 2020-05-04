@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/item_typelist_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="id:123">
+    </TextView>
+    <TextView
+        android:id="@+id/item_typelist_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="标题：XX航班怎么样">
+    </TextView>
+    <TextView
+        android:id="@+id/item_typelist_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="类型：一般事故">
+    </TextView>
+    <TextView
+        android:id="@+id/item_typelist_when"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时间：2019年10月10日">
+    </TextView>
+    <TextView
+        android:id="@+id/item_typelist_where"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地点：东京">
+    </TextView>
+    <TextView
+        android:id="@+id/item_typelist_why"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="原因：机组原因">
+    </TextView>
+
+</LinearLayout>

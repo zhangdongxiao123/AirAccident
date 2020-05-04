@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Other.Weather.WeatherActivity"
+    android:background="@mipmap/bg">
+    <RelativeLayout
+        android:id="@+id/weather_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/weather_iv_add"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_add"
+            android:scaleType="centerCrop"
+            android:layout_alignParentLeft="true">
+        </ImageView>
+        <ImageView
+            android:id="@+id/weather_iv_more"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_more"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true">
+        </ImageView>
+        <LinearLayout
+            android:id="@+id/weather_layout_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/weather_bottom_layout">
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

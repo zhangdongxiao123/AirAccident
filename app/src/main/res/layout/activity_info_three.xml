@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Other.Information.InfoThreeActivity">
+
+    <TextView
+        android:text="2016年5月31日维珍澳洲E190米尔迪拉进近与它机冲突"
+        android:textSize="20dp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#3D7087"
+        android:text="2016 年 5 月 31 日，一架澳大利亚维珍澳洲航空公司 ERJ-190 客机（注册号
+VH-ZPJ），执行 VA-1615 航班从澳大利亚墨尔本飞往米尔迪拉，机上载有 81 名乘
+客和 5 名机组人员。飞机向米尔迪拉机场目视进近，该机场无管制指挥。在脱离
+进近管制之前，机组人员被告知有另外两架飞机也在向米尔迪拉进近，其中一架
+的到达时间晚于该机，不会构成威胁，机组人员通过无线电确认另一架轻型双发
+飞机也会晚于他们到达。飞机加入左三边后转向四边，即将转入五边时，机组人
+员收到空中交通警告与防撞系统（TCAS）的交通咨询（TA），显示他们右侧有飞
+机接近。机组人员看到了一架飞机，透过挡风玻璃看几乎是静止的，在他们的右
+侧且高于天际线，以很大的速度接近他们。">
+    </TextView>
+
+</LinearLayout>

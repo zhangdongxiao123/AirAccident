@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.airaccident">
+
+    <application
+        android:name=".Other.Weather.base_wea.UnitApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Search.sactivity.NewsReasonActivity"></activity>
+        <activity android:name=".Search.sactivity.ReasonSecondActivity" />
+        <activity android:name=".Search.sactivity.ManChangeActivity" />
+        <activity android:name=".Search.sactivity.ManChooseActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Search.sactivity.ManAddActivity"></activity>
+        <activity android:name=".Search.sactivity.ManSelectActivity" />
+        <activity android:name=".Search.sactivity.ManRegistActivity" />
+        <activity android:name=".Search.sactivity.ManPasswordActivity" />
+        <activity android:name=".Search.sactivity.ManLoginActivity" />
+        <activity android:name=".Search.sactivity.ReasonListActivity" />
+        <activity android:name=".Search.sactivity.TypeListActivity" />
+        <activity android:name=".Search.sactivity.ReasonActivity" />
+        <activity android:name=".Search.sactivity.TypeActivity" />
+        <activity android:name=".Search.sactivity.MessageActivity" />
+        <activity android:name=".Search.sactivity.DuoListActivity" />
+        <activity android:name=".Search.sactivity.MultipleActivity" />
+        <activity android:name=".Search.sactivity.SingleActivity" />
+        <activity android:name=".Other.AccInfo.AccListActivity" />
+        <activity android:name=".Other.Weather.WmoreActivity" />
+        <activity android:name=".Other.History.HistoryDescActivity" />
+        <activity android:name=".Other.History.HistoryDesActivity" />
+        <activity android:name=".Other.History.HistoryActivity" />
+        <activity android:name=".Other.Weather.city_manager.DeleteCityActivity" />
+        <activity android:name=".Other.Weather.city_manager.SearchCityActivity" />
+        <activity android:name=".Other.Weather.city_manager.CityManagerActivity" />
+        <activity android:name=".Other.Weather.WeatherActivity" />
+        <activity android:name=".My.PasswordActivity" />
+        <activity android:name=".My.RegistActivity" />
+        <activity android:name=".Other.PicInfo.AirDescActivity" />
+        <activity android:name=".Other.PicInfo.AirGrid.AirGridActivity" />
+        <activity android:name=".Other.PicInfo.AirList.InfoListActivity" />
+        <activity android:name=".Activity.DetailSearchActivity" />
+        <activity android:name=".Other.Information.InfoFiveActivity" />
+        <activity android:name=".My.LoginActivity" />
+        <activity android:name=".Other.Information.InfoFourActivity" />
+        <activity android:name=".Other.Information.InfoThreeActivity" />
+        <activity android:name=".Other.Information.InfoTwoActivity" />
+        <activity android:name=".Other.Information.InfoOneActivity" />
+        <activity android:name=".Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.GuideActivity" />
+        <activity android:name=".Activity.MainActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+</manifest>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Other.Information.InfoTwoActivity">
+    <TextView
+        android:text="2014年9月24日威兹A320与伏林A320巴塞罗那小于间隔"
+        android:textSize="20dp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#3D7087"
+        android:text="2014 年 9 月 24 日，一架匈牙利威兹航空公司(Wizzair)空客 A320-200 客机
+(注册号 HA-LPL),执行从波兰波兹南飞往西班牙巴塞罗那的 W6-1963 航班（注：
+官方调查报告中航班号为 951，查询 FlightAware 此航线航班号应为 1963）。飞
+机通过标准进场航路 BISBA-4S 向巴塞罗那机场 07L 跑道下降。
+一架西班牙伏林航空公司 (Vueling) 空客 A320-200 客机（注册号 EC-LZF），
+执行从西班牙巴塞罗那飞往荷兰阿姆斯特丹的 VY-8306 航班。飞机从 07R 跑道起
+飞离港并且正在通过标准离场航路 OKABI-2R 爬升。
+这两条标准仪表航路在 Sabadell VOR 台(SLL)相交。
+西班牙民航事故与事件调查委员会(CIAIAC)的报告称两架飞机失去了规定
+的间隔，间隔一度降低到垂直距离 400 英尺，水平距离 1.3 海里，两架飞机在这
+一过程中都没有收到空中防撞系统 (TCAS)的交通或者决断咨询。空中交通管制
+员发现冲突后指挥 HA-LPL 左转航向，然后直飞 Sabadell VOR，以重新建立所要
+求的间隔。但雷达录像显示 HA-LPL 飞机突然向右转，而不是向左转，反而加重
+了最初的飞行冲突。
+这一事件没有造成严重后果，之后威兹航空 A320 安全降落在 07L 跑道，伏
+林航空的 A320 继续飞往阿姆斯特丹安全着陆。">
+    </TextView>
+
+</LinearLayout>

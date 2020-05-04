@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/acc_list_list_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="id:">
+    </TextView>
+    <TextView
+        android:id="@+id/acc_list_list_mingcheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="名称："
+        android:textSize="18sp"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/acc_list_list_leixing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="类型：">
+    </TextView>
+    <TextView
+        android:id="@+id/acc_list_list_shijian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时间：">
+    </TextView>
+    <TextView
+        android:id="@+id/acc_list_list_didian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地点：">
+    </TextView>
+    <TextView
+        android:id="@+id/acc_list_list_yuanyin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="原因：">
+    </TextView>
+</LinearLayout>

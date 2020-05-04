@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/item_info_iv"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/hangkong3"
+        android:scaleType="centerCrop">
+    </ImageView>
+    <TextView
+        android:id="@+id/item_info_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_info_iv"
+        android:layout_toLeftOf="@id/item_info_iv_next"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:text="机舱冒烟英航一客机紧急着陆 机上约20名乘客受伤"
+        android:textStyle="bold"
+        android:textSize="15dp">
+    </TextView>
+    <ImageView
+        android:id="@+id/item_info_iv_next"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/expand"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+    </ImageView>
+
+</RelativeLayout>

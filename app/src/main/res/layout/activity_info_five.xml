@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Other.Information.InfoFiveActivity">
+
+    <TextView
+        android:text="2016年11月18日派美雅航B738比隆附近餐食致副驾失能"
+        android:textSize="20dp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/five_text_view"
+        android:singleLine="false"
+        android:maxLines="25"
+        android:scrollbars="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#3D7087"
+        android:text="2016 年 11 月 18 日，一架拉脱维亚派美雅航空公司（Primera Air）波音
+737-800 型客机（注册号 YL-PSD），执行 PF-418 航班从西班牙兰萨罗特飞往丹麦
+比隆，机上载有 180 名乘客和 6 名机组人员。在到达爬升顶点后不久，两名飞行
+员享用了不同的热餐，随后该机在法国上空沿航路飞行，预计到达比隆前约 90
+分钟时，副驾驶（35 岁，持有商用驾驶员执照（CPL），总飞行时间 3500 小时，
+该机型飞行时间 3200 小时）进行了受控休息，在休息大约 10 分钟时，副驾驶开
+始感觉不适，5 分钟后冲到厕所呕吐，没有事先提醒机长（35 岁，持有航线运输
+驾驶员执照（ATPL），总飞行时间 6180 小时，该机型飞行时间 5800 小时）。机长
+呼叫乘务长到驾驶舱，要求客舱机组人员照料副驾驶。当副驾驶返回驾驶舱时，
+对情况进行了讨论，机长决定单飞行员操作继续飞往比隆，因为只有 15 分钟就
+到下降顶点位置了。副驾驶坐回她的座位上，靠背尽可能向后倾斜，剩余航段作
+为观察员。飞机最终在比隆安全着陆。
+2017 年 1 月，丹麦事故调查委员会（HCL）发布了此次事件的最终调查报告，
+总结这起严重事件发生的可能原因如下：
+食物中毒最有可能导致副驾驶失能。
+HCL 报告说，副驾驶被诊断为食物中毒，并继续呕吐直到第二天凌晨约 4 点，
+症状与副驾驶 20 年前经历的食物中毒的初期症状雷同。HCL 写道：“一位厨师随
+后告诉副驾驶，她的飞行机组餐中的一部分（热卷心菜）很可能是食物中毒的根
+源，因为卷心菜在土壤中生长，由于在备餐时它很可能只是被加热而未煮熟，在
+热餐中可能存在活的微生物细菌。恶心和反复呕吐是食物中毒的典型反应，在这
+起严重事件发生当日，制备热餐的餐饮公司向四个不同航班提供了七份相同的热
+餐，餐饮公司没有收到其他关于七份热餐的食物中毒的报告。”
+HCL 分析：
+鉴于副驾驶的症状和反应，食物中毒最有可能导致副驾驶失能。
+虽然，餐饮公司没有收到关于其他七份餐食的报告，但是 HCL 仍认为卷心菜
+是最可能的食物中毒的来源。
+安全影响和风险缓解措施
+副驾驶的失能使飞行机组人员的数量减少到要求的最低限度以下。根据运营
+人的运行程序，这属于紧急情况。
+参照运营人的程序，机长利用可用的内部（其他机组成员/自动飞行控制）
+资源和外部（ATC /着陆时的医疗援助）资源，
+减少了机上总体的工作量；将机上的飞行安全保持在了可接受的水平；对副驾驶进行了有效的医疗援助。">
+    </TextView>
+
+</LinearLayout>

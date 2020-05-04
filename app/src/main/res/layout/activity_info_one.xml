@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Other.Information.InfoOneActivity">
+    <TextView
+        android:text="2012年11月17日阿提哈德航空A320机长在阿布扎比失能"
+        android:textSize="20dp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#3D7087"
+        android:text="2012年11月17日，一架阿联酋阿提哈德航空公司空客A320-200型客机（注
+册号 A6-EII），执行 EY-308 航班从科威特城飞往阿拉伯联合酋长国首都阿布扎
+比，机上载有 70 名乘客和 6 名机组。当飞机下降到 2500 英尺高度，向阿布扎比
+机场 31L 跑道进近到左三边时，副驾驶宣布“Mayday”，报告机长已经失去意识。
+飞机转入四边，但是随后并没有继续左转加入五边，而是连续右转 270°后截获
+航向道，并最终在 31L 跑道安全降落，此时距离副驾驶宣布进入紧急状态已过去
+13 分钟。飞机停止在跑道上，医疗队登上飞机对已恢复知觉的机长进行了治疗。
+机长随后被送往医院。">
+    </TextView>
+
+</LinearLayout>
