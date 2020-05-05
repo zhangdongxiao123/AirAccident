@@ -28,7 +28,7 @@
         <activity android:name=".Search.sactivity.ManRegistActivity" />
         <activity android:name=".Search.sactivity.ManPasswordActivity" />
         <activity android:name=".Search.sactivity.ManLoginActivity" />
-        <activity android:name=".Search.sactivity.ReasonListActivity" />
+        <activity android:name=".Search.sactivity.ReasonListActivity"/>
         <activity android:name=".Search.sactivity.TypeListActivity" />
         <activity android:name=".Search.sactivity.ReasonActivity" />
         <activity android:name=".Search.sactivity.TypeActivity" />
