@@ -20,7 +20,7 @@ import static com.example.airaccident.app.Url.airdetailDetail;
 
 public class MessageActivity extends AppCompatActivity implements View.OnClickListener {
     TextView airid,airname,airtype,airwhen,airwhere,airwhy,airhow;
-    ImageView airimg,fanhui,fenxiang;
+    ImageView airimg;
     String id = "";
     DetailBean detailBean;
 
@@ -29,14 +29,14 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
         //1.绑定控件
-        airid=(TextView) findViewById(R.id.message_airid);
-        airname=(TextView)findViewById(R.id.message_airname);
-        airtype=(TextView)findViewById(R.id.message_airtype);
-        airwhen=(TextView)findViewById(R.id.message_airwhen);
-        airwhere=(TextView)findViewById(R.id.message_airwhere);
-        airwhy=(TextView)findViewById(R.id.message_airwhy);
-        airhow=(TextView)findViewById(R.id.message_airhow);
-        airimg=(ImageView) findViewById(R.id.message_airimg);
+        airid=findViewById(R.id.message_airid);
+        airname=findViewById(R.id.message_airname);
+        airtype=findViewById(R.id.message_airtype);
+        airwhen=findViewById(R.id.message_airwhen);
+        airwhere=findViewById(R.id.message_airwhere);
+        airwhy=findViewById(R.id.message_airwhy);
+        airhow=findViewById(R.id.message_airhow);
+        airimg=findViewById(R.id.message_airimg);
 //        fanhui=(ImageView) findViewById(R.id.message_fanhui);
 //        fenxiang=(ImageView) findViewById(R.id.message_fenxiang);
           //设置点击事件
