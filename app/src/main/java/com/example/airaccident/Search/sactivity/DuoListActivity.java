@@ -24,7 +24,7 @@ import java.util.List;
 import static com.example.airaccident.app.Url.allselect;
 
 public class DuoListActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageView fanhui;
+//    ImageView fanhui;
     RecyclerView liebiao;
 
     String airname = "";
@@ -57,7 +57,7 @@ public class DuoListActivity extends AppCompatActivity implements View.OnClickLi
         airwhere = intent.getStringExtra("airwhere");
         airwhy = intent.getStringExtra("airwhy");
         //1.绑定控件
-        fanhui=findViewById(R.id.duolist_fanhui);
+//        fanhui=findViewById(R.id.duolist_fanhui);
         liebiao=findViewById(R.id.duolist_liebiao);
 
         list = new ArrayList<>();
@@ -65,7 +65,7 @@ public class DuoListActivity extends AppCompatActivity implements View.OnClickLi
         liebiao.setLayoutManager(new LinearLayoutManager(this));
         liebiao.setAdapter(singleAdapter);
         //2.设置点击事件
-        fanhui.setOnClickListener(this);//返回
+//        fanhui.setOnClickListener(this);//返回
     }
 
     private void initData() {
@@ -117,9 +117,9 @@ public class DuoListActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.duolist_fanhui:
-                break;
-        }
+//        switch (v.getId()) {
+//            case R.id.duolist_fanhui:
+//                break;
+//        }
     }
 }

@@ -37,11 +37,11 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
         airwhy=(TextView)findViewById(R.id.message_airwhy);
         airhow=(TextView)findViewById(R.id.message_airhow);
         airimg=(ImageView) findViewById(R.id.message_airimg);
-        fanhui=(ImageView) findViewById(R.id.message_fanhui);
-        fenxiang=(ImageView) findViewById(R.id.message_fenxiang);
-        //设置点击事件
-        fanhui.setOnClickListener(this);
-        fenxiang.setOnClickListener(this);
+//        fanhui=(ImageView) findViewById(R.id.message_fanhui);
+//        fenxiang=(ImageView) findViewById(R.id.message_fenxiang);
+          //设置点击事件
+//        fanhui.setOnClickListener(this);
+//        fenxiang.setOnClickListener(this);
         //获取传过来的id
         id = getIntent().getStringExtra("id");
 
@@ -83,11 +83,11 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.message_fanhui:
-                break;
-            case R.id.message_fenxiang:
-                break;
-        }
+//        switch (v.getId()) {
+//           case R.id.message_fanhui:
+//               break;
+//           case R.id.message_fenxiang:
+//               break;
+//        }
     }
 }

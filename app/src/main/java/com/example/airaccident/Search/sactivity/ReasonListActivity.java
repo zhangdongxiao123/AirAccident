@@ -10,7 +10,7 @@ import android.widget.ListView;
 import com.example.airaccident.R;
 
 public class ReasonListActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageView fanhui;
+//    ImageView fanhui;
     ListView liebiao;
 
     @Override
@@ -18,17 +18,17 @@ public class ReasonListActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reason_list);
         //1.绑定控件
-        fanhui=findViewById(R.id.reasonlist_fanhui);
+//        fanhui=findViewById(R.id.reasonlist_fanhui);
         liebiao=findViewById(R.id.reasonlist_liebiao);
         //2.设置点击事件
-        fanhui.setOnClickListener(this);
+//        fanhui.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.reasonlist_fanhui:
-                break;
-        }
+//        switch (v.getId()) {
+//            case R.id.reasonlist_fanhui:
+//                break;
+//        }
     }
 }
