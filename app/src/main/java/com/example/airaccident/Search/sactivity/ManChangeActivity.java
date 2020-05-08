@@ -294,7 +294,7 @@ public class ManChangeActivity extends AppCompatActivity implements View.OnClick
         if (requestCode == 12 && resultCode == RESULT_OK) {
             //List<Uri> result = Matisse.obtainPathResult(data).get(0);
             String path = Matisse.obtainPathResult(data).get(0);
-            // GlideUtil.load(this, path, img);
+
             Glide.with(this)
                     .load(path)
                     .into(img);

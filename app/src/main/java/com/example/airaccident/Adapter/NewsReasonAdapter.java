@@ -15,9 +15,7 @@ import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * Created by 17251 on 2018/4/11.
- */
+
 
 public class NewsReasonAdapter extends  RecyclerView.Adapter<NewsReasonAdapter.MyViewHolder> {
 
@@ -63,9 +61,7 @@ public class NewsReasonAdapter extends  RecyclerView.Adapter<NewsReasonAdapter.M
         TextView item_single_id;
         TextView item_single_name;
         TextView item_reason_detail;
-        TextView item_single_when;
-        TextView item_single_where;
-        TextView item_single_why;
+
 
         public MyViewHolder(final View itemView) {
             super(itemView);

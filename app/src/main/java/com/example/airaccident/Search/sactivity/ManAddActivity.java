@@ -70,14 +70,14 @@ public class ManAddActivity extends AppCompatActivity implements View.OnClickLis
                     Matisse.from(this)
                             .choose(EnumSet.of(JPEG, PNG)) // 选择 mime 的类型
                             .theme(R.style.Matisse_Dracula)//Zhihu（亮蓝色主题） Dracula（黑色主题）
-                            .countable(true)
+                            .countable(true) //countable()是否显示选中数量
                             //这两行要连用 是否在选择图片中展示照相 和适配安卓7.0 FileProvider
                             .capture(true)
                             .captureStrategy(new CaptureStrategy(true, getPackageName() + ".FileProvider"))
                             .maxSelectable(1) // 图片选择的最多数量
-                            .spanCount(3)//网格的规格
+                            .spanCount(3)//网格的规格,一行显示几张图片
                             .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)//图像选择和预览活动所需的方向。
-                            .thumbnailScale(0.85f) // 缩略图的比例
+                            .thumbnailScale(0.85f) // 缩略图的清晰程度(与内存占用有关)
                             .imageEngine(new GlideEngineEx()) // 使用的图片加载引擎
                             .forResult(12); // 设置作为标记的请求码
 
@@ -189,8 +189,9 @@ public class ManAddActivity extends AppCompatActivity implements View.OnClickLis
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 12 && resultCode == RESULT_OK) {
             //List<Uri> result = Matisse.obtainPathResult(data).get(0);
+            //图片路径
             String path = Matisse.obtainPathResult(data).get(0);
-           // GlideUtil.load(this, path, img);
+
             Glide.with(this)
                     .load(path)
                     .into(img);
@@ -198,22 +199,23 @@ public class ManAddActivity extends AppCompatActivity implements View.OnClickLis
                 LinkedHashMap<String, Object> linkedHashMap = new LinkedHashMap<>();
                 LinkedHashMap<String, String> paths = new LinkedHashMap<>();
                 paths.put("file", path);
+                com.example.airaccident.app.network.OkHttpUtils.ResultCallback<String> callback = new com.example.airaccident.app.network.OkHttpUtils.ResultCallback<String>() {
+                    @Override
+                    public void onSuccess(String response) {
+                        JSONObject jsonObject = JSON.parseObject(response);
+                        String status = jsonObject.getString("status");
+                        String msg = jsonObject.getString("msg");
+                        String data = jsonObject.getString("data");
+                        imgurl = data;
+                    }
+
+                    @Override
+                    public void onFailure(int code, String e) {
+
+                    }
+                };
                 com.example.airaccident.app.network.OkHttpUtils.postFile(this, true, upload, linkedHashMap, paths,
-                        new  com.example.airaccident.app.network.OkHttpUtils.ResultCallback<String>() {
-                            @Override
-                            public void onSuccess(String response) {
-                                JSONObject jsonObject = JSON.parseObject(response);
-                                String status  = jsonObject.getString("status");
-                                String msg  = jsonObject.getString("msg");
-                                String data  = jsonObject.getString("data");
-                                imgurl = data;
-                            }
-
-                            @Override
-                            public void onFailure(int code, String e) {
-
-                            }
-                        }, (currentBytes, contentLength, done) -> {
+                        callback, (currentBytes, contentLength, done) -> {
 
                         });
 

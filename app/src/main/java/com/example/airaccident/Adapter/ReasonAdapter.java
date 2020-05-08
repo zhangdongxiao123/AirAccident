@@ -15,9 +15,7 @@ import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * Created by 17251 on 2018/4/11.
- */
+
 
 public class ReasonAdapter extends  RecyclerView.Adapter<ReasonAdapter.MyViewHolder> {
 

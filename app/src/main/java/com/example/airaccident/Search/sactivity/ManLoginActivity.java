@@ -81,9 +81,6 @@ public class ManLoginActivity extends AppCompatActivity {
                  * 登录逻辑写在这
                  */
 
-
-
-
                 OkHttpUtils.post()
                         .url(login)
                         .addParams("username",manAcount.getText().toString().trim())
@@ -110,7 +107,6 @@ public class ManLoginActivity extends AppCompatActivity {
                                     }
                                     else {
                                         Toast.makeText(ManLoginActivity.this, msg+"", Toast.LENGTH_SHORT).show();
-
                                     }
 
 

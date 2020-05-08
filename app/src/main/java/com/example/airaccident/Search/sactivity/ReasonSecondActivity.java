@@ -33,13 +33,18 @@ public class ReasonSecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reason_second);
+
+        recy = findViewById(R.id.recy);
+
         list = new ArrayList<>();
         singleAdapter = new SingleAdapter(this,list);
-        recy = findViewById(R.id.recy);
         recy.setLayoutManager(new LinearLayoutManager(this));
         recy.setAdapter(singleAdapter);
+
         airwhy= getIntent().getStringExtra("airwhy");
+
         Toast.makeText(this, airwhy+"", Toast.LENGTH_SHORT).show();
+
         OkHttpUtils.get()
                 .url(airwhyselect+"?airwhy="+airwhy)
                 //.addParams("",)

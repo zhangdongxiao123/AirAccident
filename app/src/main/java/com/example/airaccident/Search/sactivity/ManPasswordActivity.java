@@ -84,7 +84,6 @@ public class ManPasswordActivity extends AppCompatActivity {
                  * 修改数据库中管理员密码的代码写在这里
                  */
 
-
                 if (!again.getText().toString().equals(password.getText().toString()))
                 {
                     Toast.makeText(ManPasswordActivity.this, "两次密码输入不一致", Toast.LENGTH_SHORT).show();

@@ -32,7 +32,9 @@ import okhttp3.Response;
  * OkHttp网络连接封装工具类
  */
 public class OkHttpUtils {
-    //格式
+    //MediaType在网络协议的消息头里面叫做Content-Type，使用两部分的标识符来确定一个类型。
+    // 所以我们用的时候其实就是为了表明我们传的东西是什么类型。
+    // 比如application/json：JSON格式的数据，在RFC4627中定义
     private static final MediaType MEDIA_TYPE_JSON = MediaType.parse("application/json; charset=utf-8");
 
     private static MediaType getMimeType(String filename) {
@@ -68,6 +70,7 @@ public class OkHttpUtils {
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
 
+        //将创建出来的handler放到主线程中
         mDelivery = new Handler(Looper.getMainLooper());
     }
 
@@ -124,53 +127,6 @@ public class OkHttpUtils {
     }
 
     /**********************************************************************************************************
-     *******************************************      post 表单请求       ***************************************
-     ***********************************************************************************************************/
-    public static void post(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, final ResultCallback<String> callback) {
-        getInstance().postRequest(context, isToast, url, params, callback);
-    }
-
-    public static void post(Context context, String url, LinkedHashMap<String, Object> params, final ResultCallback<String> callback) {
-        getInstance().postRequest(context, false, url, params, callback);
-    }
-
-    private void postRequest(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, final ResultCallback<String> callback) {
-        if (urls.contains(url)) {
-           // ToastUtils.show(context, R.string.frequent);
-            return;
-        }
-        urls.add(url);
-
-        //请求体
-        FormBody.Builder builder = new FormBody.Builder();
-
-        StringBuilder sb = new StringBuilder();
-        sb.append("{");
-        if (!CollectionUtils.isEmpty(params)) {
-            for (Object o : params.entrySet()) {
-                Map.Entry entry = (Map.Entry) o;
-                String key = String.valueOf(entry.getKey());
-                String val = String.valueOf(entry.getValue());
-                builder.add(key, val);
-
-                sb.append("\"").append(key).append("\"").append(":").append("\"").append(val).append("\"").append(",");
-            }
-        }
-
-        RequestBody requestBody = builder.build();
-        String string = sb.append("}").toString();
-
-        String newUrl = "Post: " + url + "\nParams: " + string;
-
-
-        Request request = new Request.Builder().url(url)
-                .post(requestBody)
-                .build();
-
-        deliveryResult(context, isToast, url, newUrl, callback, request);
-    }
-
-    /**********************************************************************************************************
      *******************************************      post 表单形式 混合参数和文件       *************************
      *  @param isToast      是否吐司
      *  @param url          请求网址
@@ -183,9 +139,6 @@ public class OkHttpUtils {
         return getInstance().postRequest(context, isToast, url, params, fileList, callback, progressListener);
     }
 
-    public static Call postFile(Context context, String url, LinkedHashMap<String, Object> params, LinkedHashMap<String, String> fileList, final ResultCallback<String> callback, ProgressListener progressListener) {
-        return getInstance().postRequest(context, false, url, params, fileList, callback, progressListener);
-    }
 
     private Call postRequest(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, LinkedHashMap<String, String> fileNames,
                              final ResultCallback<String> callback, ProgressListener progressListener) {
@@ -243,75 +196,6 @@ public class OkHttpUtils {
                 .build();
         return deliveryResult(context, isToast, url, newUrl, callback, request);
     }
-
-    /**********************************************************************************************************
-     *******************************************      post Json请求、拼到body里       ***************************
-     *  @param isToast      是否吐司
-     *  @param url          请求网址
-     *  @param params       请求参数
-     *  @param callback     回调
-     * */
-    public static Call postJson(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, final ResultCallback<String> callback) {
-        return getInstance().postRequestObject(context, isToast, url, callback, params);
-    }
-
-    public static Call postJson(Context context, String url, LinkedHashMap<String, Object> params, final ResultCallback<String> callback) {
-        return getInstance().postRequestObject(context, false, url, callback, params);
-    }
-
-    private Call postRequestObject(Context context, boolean isToast, String url, final ResultCallback<String> callback, LinkedHashMap<String, Object> params) {
-        if (urls.contains(url)) {
-         //   ToastUtils.show(context, R.string.frequent);
-            return null;
-        }
-        urls.add(url);
-
-        StringBuilder sb = new StringBuilder();
-        //请求体 参数
-
-        if (!CollectionUtils.isEmpty(params)) {
-            int i = 0;
-            for (Object o : params.entrySet()) {
-                Map.Entry entry = (Map.Entry) o;
-                String key = String.valueOf(entry.getKey());
-                Object value = entry.getValue();
-
-                if (i == 0) {
-                    sb.append("{");
-                }
-
-                sb.append("\"").append(key).append("\":");
-                if (value instanceof String) {
-                    if (((String) value).endsWith("}") && ((String) value).startsWith("{")) {
-                        sb.append(value);
-                    } else if (((String) value).endsWith("]") && ((String) value).startsWith("[")) {
-                        sb.append(value);
-                    } else {
-                        sb.append("\"").append(value).append("\"");
-                    }
-                } else {
-                    sb.append(value);
-                }
-
-                if (i == params.size() - 1) {
-                    sb.append("}");
-                } else {
-                    sb.append(",");
-                }
-
-                i++;
-            }
-        }
-
-        RequestBody requestBody = RequestBody.create(MEDIA_TYPE_JSON, sb.toString());
-        Request request = new Request.Builder().url(url)
-                .post(requestBody)
-                .build();
-
-        String newUrl = "Post Json: " + url + "\nParams: " + sb.toString();
-        return deliveryResult(context, isToast, url, newUrl, callback, request);
-    }
-
 
     /**********************************************************************************************************
      *******************************************      处理结果       ********************************************
@@ -383,10 +267,6 @@ public class OkHttpUtils {
     //请求失败
     private void sendFailCallback(Context context, boolean isToast, final ResultCallback callback, final Exception e,
                                   String params, String body, final int code) {
-//        Logger.e("失败：" + params +
-//                "\nCode: " + code +
-//                "\nMsg: " + e.getMessage() +
-//                "\nBody: " + body);
 
         String err;
         if (context != null) {
@@ -403,11 +283,6 @@ public class OkHttpUtils {
             err = e.getMessage();
         }
 
-      //  Logger.e("isToast: " + isToast + "   err: " + err);
-//
-//        if (isToast && !TextUtils.isEmpty(err)) {
-//            //ToastUtils.show(err);
-//        }
 
         mDelivery.post(() -> {
             try {

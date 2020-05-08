@@ -38,7 +38,7 @@
             android:gravity="center"
             android:text="隐患"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"/>
         <View
             android:background="#333"
@@ -51,7 +51,7 @@
             android:gravity="center"
             android:text="不安全事件"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"/>
         <View
             android:background="#333"
@@ -64,7 +64,7 @@
             android:gravity="center"
             android:text="一般事故"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"/>
         <View
             android:background="#333"
@@ -77,7 +77,7 @@
             android:gravity="center"
             android:text="重大事故"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"/>
 
     </LinearLayout>
@@ -87,13 +87,12 @@
         android:background="#071771">
     </TextView>
 
-
-        <TextView
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:text="隐患:飞机整个飞行过程中未发现问题，但确实存在该问题。"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="隐患:飞机整个飞行过程中未发现问题，但确实存在该问题。"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <TextView
         android:textSize="14sp"
         android:textColor="#000000"
