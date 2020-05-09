@@ -220,6 +220,7 @@ public class OkHttpUtils {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
+
                 urls.remove(url);
 
                 String body = "";
