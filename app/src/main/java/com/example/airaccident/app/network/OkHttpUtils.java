@@ -142,7 +142,6 @@ public class OkHttpUtils {
     private Call postRequest(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, LinkedHashMap<String, String> fileNames,
                              final ResultCallback<String> callback) {
         if (urls.contains(url)) {
-          //  ToastUtils.show(context, R.string.frequent);
             return null;
         }
         urls.add(url);
@@ -170,6 +169,7 @@ public class OkHttpUtils {
                 for (String key : keySet) {
                     File file = new File(fileNames.get(key)); //生成文件
                     if (file.exists()) {
+                        //这里是封装上传图片参数
                         //根据文件的后缀名，获得文件类型
                         builder.addFormDataPart( //给Builder添加上传的文件
                                 key,  //请求的名字
@@ -255,7 +255,6 @@ public class OkHttpUtils {
                 if (callback != null)
                     callback.onSuccess(obj);
             } catch (Exception e) {
-              //  ToastUtils.show(context, R.string.abnormal_data);
                 e.printStackTrace();
             }
         });
@@ -264,29 +263,11 @@ public class OkHttpUtils {
     //请求失败
     private void sendFailCallback(Context context, boolean isToast, final ResultCallback callback, final Exception e,
                                   String params, String body, final int code) {
-
-        String err;
-        if (context != null) {
-            if (code == CODE_DEAL_WITH_FAILURE) {              //数据异常
-               // err = context.getString(R.string.abnormal_data);
-            } else if (code == CODE_NO_NET) {
-             //   err = context.getString(R.string.no_found_network);
-            } else if (code == CODE_SERVICE_ERROR) {              //未知错误
-            err = "1111";
-            } else {                                                //其他
-                err = e.getMessage();
-            }
-        } else {
-            err = e.getMessage();
-        }
-
-
         mDelivery.post(() -> {
             try {
                 if (callback != null)
                     callback.onFailure(code, "1");
             } catch (Exception e1) {
-                if (isToast) //ToastUtils.show(context, R.string.abnormal_data);
                 e1.printStackTrace();
             }
         });
