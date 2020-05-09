@@ -199,7 +199,8 @@ public class ManAddActivity extends AppCompatActivity implements View.OnClickLis
                 LinkedHashMap<String, Object> linkedHashMap = new LinkedHashMap<>();
                 LinkedHashMap<String, String> paths = new LinkedHashMap<>();
                 paths.put("file", path);
-                com.example.airaccident.app.network.OkHttpUtils.ResultCallback<String> callback = new com.example.airaccident.app.network.OkHttpUtils.ResultCallback<String>() {
+                com.example.airaccident.app.network.OkHttpUtils.postFile(this, true, upload, linkedHashMap, paths,
+                        new  com.example.airaccident.app.network.OkHttpUtils.ResultCallback<String>() {
                     @Override
                     public void onSuccess(String response) {
                         JSONObject jsonObject = JSON.parseObject(response);
@@ -209,23 +210,15 @@ public class ManAddActivity extends AppCompatActivity implements View.OnClickLis
                         imgurl = data;
                     }
 
-                    @Override
-                    public void onFailure(int code, String e) {
+                            @Override
+                            public void onFailure(int code, String e) {
 
-                    }
-                };
-                com.example.airaccident.app.network.OkHttpUtils.postFile(this, true, upload, linkedHashMap, paths,
-                        callback, (currentBytes, contentLength, done) -> {
-
+                            }
                         });
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
-
-
         }
     }
 

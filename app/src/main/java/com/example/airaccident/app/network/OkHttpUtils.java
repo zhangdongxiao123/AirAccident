@@ -133,15 +133,14 @@ public class OkHttpUtils {
      *  @param params       请求参数
      *  @param fileList     文件路径
      *  @param callback     回调
-     *  @param progressListener     进度回调
      * */
-    public static Call postFile(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, LinkedHashMap<String, String> fileList, final ResultCallback<String> callback, ProgressListener progressListener) {
-        return getInstance().postRequest(context, isToast, url, params, fileList, callback, progressListener);
+    public static Call postFile(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, LinkedHashMap<String, String> fileList, final ResultCallback<String> callback) {
+        return getInstance().postRequest(context, isToast, url, params, fileList, callback);
     }
 
 
     private Call postRequest(Context context, boolean isToast, String url, LinkedHashMap<String, Object> params, LinkedHashMap<String, String> fileNames,
-                             final ResultCallback<String> callback, ProgressListener progressListener) {
+                             final ResultCallback<String> callback) {
         if (urls.contains(url)) {
           //  ToastUtils.show(context, R.string.frequent);
             return null;
@@ -150,7 +149,8 @@ public class OkHttpUtils {
 
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        //请求体
+        //设置请求体
+        //MultipartBody可以构建与HTML文件上传格式兼容的复杂请求体。
         MultipartBody.Builder builder = new MultipartBody.Builder().setType(MultipartBody.FORM);
         if (!CollectionUtils.isEmpty(params)) {
             for (Object o : params.entrySet()) {
@@ -189,10 +189,9 @@ public class OkHttpUtils {
         String newUrl = "Post File: " + url + "\nParams: " + string;
 
         //请求
-        Request request = new Request.Builder().url(url)
-                .post(ProgressHelper.addProgressRequestListener(
-                        requestBody,
-                        progressListener))
+        Request request = new Request.Builder()
+                .url(url)
+                .post(requestBody)
                 .build();
         return deliveryResult(context, isToast, url, newUrl, callback, request);
     }
@@ -233,8 +232,6 @@ public class OkHttpUtils {
 
                     //回调
                     if (code == CODE_SUCCESS) {
-//                       / Logger.i("成功：" + params +
-//                                "\nBody: " + body);
                         sendSuccessCallBack(context, callback, body);
                     } else {
                         sendFailCallback(context, isToast, callback, new Exception(msg), params, body, code);

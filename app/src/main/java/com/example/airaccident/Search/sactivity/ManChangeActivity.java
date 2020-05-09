@@ -317,8 +317,6 @@ public class ManChangeActivity extends AppCompatActivity implements View.OnClick
                             public void onFailure(int code, String e) {
 
                             }
-                        }, (currentBytes, contentLength, done) -> {
-
                         });
 
             } catch (Exception e) {
