@@ -14,27 +14,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="单条件查询"
-        android:layout_marginTop="10dp">
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="@drawable/layout_style"
+        android:layout_marginTop="20dp">
     </Button>
     <Button
         android:id="@+id/duotiaojian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="多条件查询"
-        android:layout_marginTop="10dp">
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="@drawable/layout_style"
+        android:layout_marginTop="100dp">
     </Button>
     <Button
         android:id="@+id/shijianleixing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="按事件类型查询"
-        android:layout_marginTop="10dp">
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="@drawable/layout_style"
+        android:layout_marginTop="100dp">
     </Button>
     <Button
         android:id="@+id/shijianyuanyin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="按事件原因查询"
-        android:layout_marginTop="10dp">
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="@drawable/layout_style"
+        android:layout_marginTop="100dp">
     </Button>
 </LinearLayout>
