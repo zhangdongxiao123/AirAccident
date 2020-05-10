@@ -39,7 +39,7 @@
                 android:layout_height="200dp"
                 android:scaleType="fitXY"
                 android:layout_margin="10dp"
-                android:src="@mipmap/icon_history">
+                android:src="@mipmap/moren">
             </ImageView>
 
             <TextView
